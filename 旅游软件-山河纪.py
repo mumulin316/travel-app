@@ -1,7 +1,7 @@
 import streamlit as st
 import spider
 import time
-from guangdong import 东莞, 广州
+from guangdong import dongguan，guangzhou
 #
 # st.set_page_config(page_title="山河纪 - 广东旅游攻略", layout="wide")
 # st.title("🌏 山河纪 - 广东旅游攻略")
