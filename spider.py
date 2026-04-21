@@ -26,7 +26,7 @@ def get_spot_intro(spot_name, city_name, spot_image_url):
         url = "https://api.deepseek.com/v1/chat/completions"
         headers = {
             "Authorization": f"Bearer {API_KEY}",
-            "Content-Type": "application/json"
+            "Content-Type": "application/json"  # 确保这里是英文引号 ""
         }
 
         prompt = f"""
