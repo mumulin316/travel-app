@@ -3,14 +3,7 @@ import requests
 import os
 import time
 
-def get_spot_intro(selected_spot, selected_city, image_url):
-    # 1. 函数内部直接读取密钥，100% 不会找不到
-    API_KEY = st.secrets["DEEPSEEK_API_KEY"]
-    
-    # 2. 你的第32行这里就不会报错了
-    if not API_KEY:
-        return "API Key 未配置，请检查 Streamlit Secrets"
-    
+API_KEY = os.getenv("DEEPSEEK_API_KEY")
 
 # ==============================
 # 流式输出工具（给景点介绍用）
