@@ -20,8 +20,8 @@ st.markdown("""
 
 # 城市路由映射（以后加城市只在这里加一行）
 city_data_map = {
-    "东莞": 东莞,
-    "广州": 广州
+    "东莞": dongguan,
+    "广州": guangzhou
 }
 
 # 1. 选择城市
