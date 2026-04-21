@@ -4,7 +4,7 @@ import os
 import time
 
 # 环境变量读取KEY
-API_KEY = os.getenv("DEEPSEEK_API_KEY")
+API_KEY = st.secrets["DEEPSEEK_API_KEY"]
 
 # ==============================
 # 流式输出工具（给景点介绍用）
