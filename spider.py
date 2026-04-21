@@ -4,7 +4,16 @@ import os
 import time
 
 # 环境变量读取KEY
-API_KEY = st.secrets["DEEPSEEK_API_KEY"]
+def get_deepseek_client():
+    # 关键：这里在函数内部读取，是在页面启动后才执行
+    API_KEY = st.secrets["DEEPSEEK_API_KEY"]
+    
+    # 这里写你的初始化逻辑，比如：
+    # client = DeepSeekClient(API_KEY=API_KEY)
+    # return client
+    
+    # 为了演示，我们直接返回密钥
+    return API_KEY
 
 # ==============================
 # 流式输出工具（给景点介绍用）
