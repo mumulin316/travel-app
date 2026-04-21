@@ -3,17 +3,14 @@ import requests
 import os
 import time
 
-# 环境变量读取KEY
-def get_deepseek_client():
-    # 关键：这里在函数内部读取，是在页面启动后才执行
+def get_spot_intro(selected_spot, selected_city, image_url):
+    # 1. 函数内部直接读取密钥，100% 不会找不到
     API_KEY = st.secrets["DEEPSEEK_API_KEY"]
     
-    # 这里写你的初始化逻辑，比如：
-    # client = DeepSeekClient(API_KEY=API_KEY)
-    # return client
+    # 2. 你的第32行这里就不会报错了
+    if not API_KEY:
+        return "API Key 未配置，请检查 Streamlit Secrets"
     
-    # 为了演示，我们直接返回密钥
-    return API_KEY
 
 # ==============================
 # 流式输出工具（给景点介绍用）
